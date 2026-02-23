@@ -1,5 +1,5 @@
-import person import Person 
-import medicalcenter from MedicalCenter
+from person import Person 
+from medicalcenter import MedicalCenter
 
 class Doctor(Person):
     
@@ -27,3 +27,4 @@ class Doctor(Person):
             f"Years of Experience: {self.__years_experience}\n"
             f"Works at: {center_name}"
         )
+
