@@ -4,12 +4,13 @@ Created on Mon Feb 16 13:21:25 2026
 
 @author: sanus
 """
+from bankaccount import BankAccount
 
 class Customer:
-    def __init__(self, name: str, address: str, acct: BankAccount):
+    def __init__(self, name: str, address: str, account: BankAccount):
         self.name= name
         self.address = address
-        self.acct = acct
+        self.account = account
         
     def get_name(self) -> str:
         return self.name
