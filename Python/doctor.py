@@ -1,4 +1,5 @@
 import person import Person 
+import medicalcenter from MedicalCenter
 
 class Doctor(Person):
     
