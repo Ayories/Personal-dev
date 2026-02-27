@@ -13,7 +13,8 @@ class Person:
         return self.__name
     def get__address():
         return self.__address
-    def __str__():
-        return 
-            "Patient Name:"
-            "Address"
+    def __str__(self):
+        return (
+            f"name: {self.__name}\n"
+            f"address: {self.__address}\n"
+            )

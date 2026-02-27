@@ -19,12 +19,10 @@ class Doctor(Person):
         return self.__center
 
     def __str__(self):
-        center_name = self._center.get_name() if self._center else ""
+        center_name = self.__center.get_c_name() if self.__center else ""
         return (
-            f"Doctor Name: {self.__name}\n"
-            f"Address: {self.__address}\n"
+            super().__str__()+
             f"Specialty: {self.__specialty}\n"
             f"Years of Experience: {self.__years_experience}\n"
             f"Works at: {center_name}"
         )
-
