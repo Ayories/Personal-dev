@@ -9,9 +9,9 @@ class Person:
     def __init__(self, name: str, address: str):
         self.__name = name
         self.__address = address
-    def get__name():
+    def get__name(self):
         return self.__name
-    def get__address():
+    def get__address(self):
         return self.__address
     def __str__(self):
         return (
