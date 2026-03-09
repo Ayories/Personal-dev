@@ -1,5 +1,6 @@
 from gameboardfixed import GameBoardFixed
 from humanplayer import HumanPlayer
+from computerplayer import ComputerPlayer
 
 def main():
    while True: 

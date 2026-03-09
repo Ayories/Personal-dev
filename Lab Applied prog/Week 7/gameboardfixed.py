@@ -31,33 +31,6 @@ class GameBoardFixed:
             return True
             
         return False
-    
-    """def check_winner(self):
-        # Given a board and a player's letter, this function returns True if  player has won.
-        winner = (self.check_hz() or self.check_vt() or
-                 (self.__board[0][0] == self.__board[1][1] and self.__board[1][1] == self.__board[2][2] and self.__board[2][2] != self.__space) or # check diagonal row top left to bottom right
-                 (self.__board[0][2] == self.__board[1][1] and self.__board[1][1] == self.__board[2][0] and self.__board[2][0] != self.__space)) # check diagonal row top right to bottom left# when performing the check, and if there are three elements are equal, then make sure they are notequal to empty space ' ' which is what the 2D array was populated with at the start of the application.winner = (self.check_hz() or self.check_vt() or(self.__board[0][0] == self.__board[1][1] and self.__board[1][1] == self.__board[2][2] andself.__board[2][2] != self.__space) or # check diagonal row top left to bottom right(self.__board[0][2] == self.__board[1][1] and self.__board[1][1] == self.__board[2][0] andself.__board[2][0] != self.__space)) # check diagonal row top right to bottom left# when performing the check, and if there are three elements are equal, then make sure they are notequal to empty space ' ' which is what the 2D array was populated with at the start of the application.
-        return winner
-    
-    def check_vt(self):
-        col = ''
-        for y in range(3):
-            for x in range(3):
-                col += self.__board[x][y]
-                if 'XXX' in col or 'OOO' in col:
-                    return True
-                col = ''
-            return False # return false if no winner was found
-    
-    def check_hz(self):
-        row = ''
-        for x in range(3):
-            for y in range(3):
-                row += self.__board[x][y]
-                if 'XXX' in row or 'OOO' in row:
-                    return True
-                row = ''
-            return False # return false if no winner was found """
         
     def is_board_full(self):
             for i in range (self.__size):
