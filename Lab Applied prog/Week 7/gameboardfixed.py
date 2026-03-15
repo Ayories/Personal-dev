@@ -11,7 +11,39 @@ class GameBoardFixed:
         self.__board[row][col] = element
     
     def check_winner(self):
-        # 1. Check all rows
+        winner = (self.check_hz() or self.check_vt() or self.check_diagonals())
+        return winner
+
+
+    def check_hz(self):
+        row = ''
+        for x in range(3):
+            for y in range(3):
+                row += self.__board[x][y]
+            if 'XXX' in row or 'OOO' in row:
+                return True
+            row = ''
+        return False
+
+    def check_vt(self):
+        col = ''
+        for y in range(3):
+            for x in range(3):
+                col += self.__board[x][y]
+            if 'XXX' in col or 'OOO' in col:
+                return True
+            col = ''
+        return False
+
+    def check_diagonals(self):
+        if self.__board[0][0] == self.__board[1][1] == self.__board[2][2] != self.__space:
+            return True
+        if self.__board[0][2] == self.__board[1][1] == self.__board[2][0] != self.__space:
+            return True
+        return False
+
+    # Check the last move for a winner
+        """ # 1. Check all rows
         for row in self.__board:
             # If all cells in the row match the first cell (and aren't empty)
             if all(cell == row[0] and cell != self.__space for cell in row):
@@ -31,7 +63,7 @@ class GameBoardFixed:
             return True
             
         return False
-        
+        """
     def is_board_full(self):
             for i in range (self.__size):
                 for j in range (self.__size):

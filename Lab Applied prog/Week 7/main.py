@@ -10,7 +10,7 @@ def main():
     cp = ComputerPlayer("O", gboard)    # create player 2 object
 	
 	# place players 1 and 2 in tuple for turn based game. 
-    players_lst = (hp, cp)
+    players_lst = (cp, hp)
 	
     inPlay = True
 	
